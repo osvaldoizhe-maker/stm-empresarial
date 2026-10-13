@@ -1,0 +1,9 @@
+-- Plantilla de pruebas: ejecutar con supabase test db / pgTAP en un entorno de prueba.
+-- Antes de ejecutar, preparar dos usuarios Auth (A/B), dos empresas (A/B), y membresías cruzadas aisladas.
+-- Caso 1: usuario A solo debe ver equipos de empresa A.
+-- Caso 2: INSERT con company_id B por usuario A debe ser rechazado.
+-- Caso 3: usuario viewer no debe INSERT/UPDATE/DELETE equipos.
+-- Caso 4: usuario técnico no asignado no debe actualizar orden de otro técnico.
+-- Caso 5: anon no debe leer ninguna tabla operacional.
+-- Caso 6: usuario A no debe ver audit_events de empresa B.
+-- Estos escenarios deben convertirse en pruebas automatizadas concretas y pasar antes de producción.

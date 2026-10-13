@@ -1,0 +1,17 @@
+# Puerta de seguridad antes de producción
+- [ ] RLS y GRANT revisados en todas las tablas expuestas.
+- [ ] Pruebas automatizadas de permitir/denegar por cada rol, usuario y tenant.
+- [ ] Alta de empresa, invitación, baja y asignación de roles solo mediante función confiable; sin registro público abierto.
+- [ ] MFA obligatorio para owner/admin; verificación de correo; recuperación segura.
+- [ ] SMTP propio, límites de intentos y CAPTCHA/bot protection según riesgo.
+- [ ] HTTPS, CSP ajustada a orígenes reales, HSTS solo cuando todos los subdominios estén listos.
+- [ ] Rate limiting para login, API, importaciones y exportaciones.
+- [ ] Archivos en bucket privado con políticas Storage por empresa, límite de tamaño/tipo y URLs firmadas.
+- [ ] Auditoría inmutable por lógica de servidor; excluir tokens, contraseñas y secretos de logs.
+- [ ] Validación server-side (Zod), límites de paginación y controles de transición de estado.
+- [ ] Dependencias y secretos escaneados en CI; actualización regular.
+- [ ] Entornos separados local/staging/producción; migraciones versionadas.
+- [ ] SSL enforcement, network restrictions y MFA del proveedor activados.
+- [ ] Respaldos automáticos, RPO/RTO definidos y restauración probada.
+- [ ] Monitoreo, alertas, plan de incidentes, retención de datos y aviso de privacidad revisados.
+- [ ] Prueba de carga y prueba de penetración independiente completadas.
